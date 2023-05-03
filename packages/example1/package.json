@@ -20,6 +20,7 @@
   ],
   "main": "./lib/index.js",
   "scripts": {
+    "build": "packemon build --addExports --no-addFiles --declaration --quiet --loadConfigs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
