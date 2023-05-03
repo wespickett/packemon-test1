@@ -1,0 +1,44 @@
+{
+  "name": "packemon-test1",
+  "version": "1.0.0",
+  "description": "",
+  "packemon": [
+    {
+      "format": "lib",
+      "platform": "node",
+      "inputs": {
+        "index": "src/index.ts"
+      }
+    },
+    {
+      "format": "esm",
+      "platform": "browser",
+      "inputs": {
+        "index": "src/index.ts"
+      }
+    }
+  ],
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "types": "./lib/index.d.ts",
+  "module": "./esm/index.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "browser": {
+        "types": "./esm/index.d.ts",
+        "module": "./esm/index.js",
+        "import": "./esm/index.js"
+      },
+      "node": {
+        "types": "./lib/index.d.ts",
+        "default": "./lib/index.js"
+      },
+      "default": "./lib/index.js"
+    }
+  }
+}
